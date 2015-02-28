@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Un4seen.Bass;
 using Un4seen.BassWasapi;
+using VkNet;
 
 namespace VKAll
 {
@@ -25,6 +26,7 @@ namespace VKAll
         public MainWindow()
         {
             InitializeComponent();
+            var VK = new VkApi();
         }
     }
 }
