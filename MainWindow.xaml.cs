@@ -18,6 +18,7 @@ using VkNet;
 using VkNet.Enums.Filters;
 using VkNet.Exception;
 using System.IO;
+using FirstFloor.ModernUI.Windows.Controls;
 
 
 namespace VKAll
@@ -25,7 +26,7 @@ namespace VKAll
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : ModernWindow
     {   
         public MainWindow()
         {
@@ -47,22 +48,26 @@ namespace VKAll
             try
             {
                 VK.Authorize(appID, email, pass, scope);
-                lblConnStat.Background = Brushes.Green;
+                var MainWind = new frmMainWind();
+                MainWind.Show();
+                Close();
             }
             catch (VkApiAuthorizationException)
             {
                 
                 //TypeInitializationException ex
-                //MessageBox.Show(ex.InnerException.ToString());
-                lblConnStat.Background = Brushes.Red;
+                MessageBox.Show("Не верный логин или пароль!");
             }
-        }
-
-        private void btnSave_Click(object sender, RoutedEventArgs e)
-        {
-            Properties.Settings.Default.pass_set = txtPass.Text;
-            Properties.Settings.Default.eMail_set = txtEMail.Text;
-            Properties.Settings.Default.Save();
+            //if (chkPassSave.IsChecked.Value)
+            //{
+            //    Properties.Settings.Default.pass_set = txtPass.Text;
+            //    Properties.Settings.Default.Save();
+            //}
+            //else
+            //{
+            //    Properties.Settings.Default.pass_set = "";
+            //    Properties.Settings.Default.Save();
+            //}
         }
     }
 }

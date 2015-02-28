@@ -1,15 +1,15 @@
-﻿<Window x:Name="frmMain" x:Class="VKAll.MainWindow"
+﻿<mui:ModernWindow x:Name="frmAuthorized" x:Class="VKAll.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="VK for all" Height="415.672" Width="596.642" WindowStartupLocation="CenterScreen">
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="Авторизация" Height="157.672" Width="318.642" WindowStartupLocation="CenterScreen" Cursor="" ResizeMode="CanMinimize" Icon="Source/ico/mario.ico">
     <Grid>
-        <Label Content="eMail или тел:" HorizontalAlignment="Left" Margin="76,65,0,0" VerticalAlignment="Top"/>
-        <Label Content="Пароль" HorizontalAlignment="Left" Margin="111,96,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtEMail" HorizontalAlignment="Left" Height="23" Margin="167,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253"/>
-        <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" Margin="167,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253"/>
-        <Button x:Name="btnAutorizet" Content="Авторизация" HorizontalAlignment="Left" Margin="345,139,0,0" VerticalAlignment="Top" Width="75" Click="btnAutorizet_Click"/>
-        <Label x:Name="lblConnStat" Content="Label" HorizontalAlignment="Left" Margin="145,212,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnSave" Content="Сохранить" HorizontalAlignment="Left" Margin="345,185,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
+        <Label Content="eMail или тел:" HorizontalAlignment="Left" Margin="13,13,0,0" VerticalAlignment="Top"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="48,44,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEMail" HorizontalAlignment="Left" Height="23" Margin="104,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" Margin="104,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177"/>
+        <Button x:Name="btnAutorizet" Content="Авторизация" HorizontalAlignment="Left" Margin="206,84,0,0" VerticalAlignment="Top" Width="75" Click="btnAutorizet_Click"/>
+        <CheckBox x:Name="chkPassSave" Content="Сохранить пароль" HorizontalAlignment="Left" Margin="48,84,0,0" VerticalAlignment="Top"/>
 
     </Grid>
-</Window>
+</mui:ModernWindow>
