@@ -1,8 +1,8 @@
-﻿<Window x:Class="VKAll.MainWindow"
+﻿<Window x:Name="frmMain" x:Class="VKAll.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="VK for all" Height="415.672" Width="596.642" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+
     </Grid>
 </Window>
